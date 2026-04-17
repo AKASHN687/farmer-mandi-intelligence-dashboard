@@ -1,0 +1,72 @@
+SMART MANDI - SETUP INSTRUCTIONS
+=================================
+
+STEP 1: Import Database
+------------------------
+1. Open phpMyAdmin: http://localhost/phpmyadmin/
+2. Click "Import" tab
+3. Choose file: database/full_database_with_sales.sql
+4. Click "Go"
+
+This creates:
+- All tables (users, crops, mandis, prices, sales, etc.)
+- 10 UP Mandis with locations
+- 10 Crops with varieties
+- 70 Price records (April 16, 2024)
+- Demo user with sales history
+
+STEP 2: Access the Application
+------------------------------
+1. Signup Page: http://localhost/mandi/signup-direct.php
+2. Login Page: http://localhost/mandi/login-direct.php
+3. Dashboard: http://localhost/mandi/dashboard-direct.php
+4. Profile: http://localhost/mandi/profile-detailed.php
+
+STEP 3: Demo Login (Optional)
+-----------------------------
+Phone: 9876543210
+Password: password
+
+STEP 4: What Works Now
+----------------------
+✅ User Registration (auto-login after signup)
+✅ User Login/Logout (passwords work correctly)
+✅ Dashboard with price comparison
+✅ Add/Delete crops
+✅ Profile with sales history
+✅ Record new sales
+✅ View statistics (total sales, quantity, etc.)
+
+FILES TO USE
+------------
+- signup-direct.php (Registration)
+- login-direct.php (Login)
+- dashboard-direct.php (Main Dashboard)
+- profile-detailed.php (User Profile with Sales)
+- logout.php (Logout)
+
+DATABASE STRUCTURE
+------------------
+- users: Farmer accounts with profile info
+- mandis: 10 UP markets with distances
+- crops: Crop catalog
+- farmer_crops: Crops listed for sale
+- price_data: Daily prices from each mandi
+- sales_transactions: Completed sales history
+- predictions: Price predictions
+- alerts: Notifications
+
+TROUBLESHOOTING
+---------------
+If login fails:
+1. Check database is imported correctly
+2. Check user exists in phpMyAdmin
+3. Password must be at least 6 characters
+
+If prices not showing:
+1. Import the SQL file again
+2. Check price_data table has records
+
+If "Database Not Ready" error:
+1. Make sure XAMPP MySQL is running
+2. Check config/database.php credentials
